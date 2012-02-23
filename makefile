@@ -4,7 +4,7 @@ CC=gcc
 main:	io net
 	${CC} main.c -o fmq io.o net.o
 
-io:	io.h io.c
+io:	
 	${CC} -c io.c -o io.o
 
 net:	fepoll
@@ -12,6 +12,7 @@ net:	fepoll
 
 fepoll:	fepoll.h fepoll.c
 	${CC} -c fepoll.c -o fepoll.o
+
 clean:
 	rm -f *.o
 	rm -f fmq
