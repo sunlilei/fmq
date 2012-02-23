@@ -7,9 +7,11 @@ main:	io net
 io:	io.h io.c
 	${CC} -c io.c -o io.o
 
-net:	net.h net.c
+net:	fepoll
 	${CC} -c net.c -o net.o
 
+fepoll:	fepoll.h fepoll.c
+	${CC} -c fepoll.c -o fepoll.o
 clean:
 	rm -f *.o
 	rm -f fmq
